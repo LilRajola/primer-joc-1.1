@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3t6mqyxsaris"]
+
+[ext_resource type="Script" uid="uid://vunth6o3h0q1" path="res://Scripts/gravetat.gd" id="1_3hse5"]
+[ext_resource type="Texture2D" uid="uid://6ukg2irnp1t3" path="res://Imatges/pngtree-wooden-wheel-aged-american-ancient-png-image_6088166.png" id="1_m1omg"]
+[ext_resource type="Texture2D" uid="uid://0fgh3173kdsw" path="res://Imatges/3d-rendering-brown-brick-wall-isolated-png.webp" id="2_3hse5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_418n2"]
+radius = 181.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pelah"]
+size = Vector2(744, 288)
+
+[node name="Gravetat" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_3hse5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-489, -430)
+texture = ExtResource("1_m1omg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-493, -426)
+shape = SubResource("CircleShape2D_418n2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1433, -188)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(895.5, 445)
+scale = Vector2(1.9275, 1.345)
+texture = ExtResource("2_3hse5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(903, 452)
+shape = SubResource("RectangleShape2D_pelah")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-669, -188)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(895.5, 445)
+scale = Vector2(1.9275, 1.345)
+texture = ExtResource("2_3hse5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(900.625, 447)
+shape = SubResource("RectangleShape2D_pelah")
+
+[node name="Camera2D" type="Camera2D" parent="."]
