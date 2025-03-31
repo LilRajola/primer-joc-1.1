@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var gravetat:= Vector2.DOWN * (980/2)
 var velocitat := 200
-var salt := -500
+var salt := -400
 var salts_disponibles := max_salts
 var max_salts := 2
 
